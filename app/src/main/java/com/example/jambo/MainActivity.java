@@ -9,10 +9,19 @@ import android.content.Intent;
 import android.nfc.Tag;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Switch;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
-    TextView storyText;
+import java.util.MissingFormatArgumentException;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+    TextView textView;
+    Button storyButton;
+    Button storyButton2;
+    Button storyButton3;
+
     private static final String TAG = Activity.class.getSimpleName();
 
     @Override
@@ -20,31 +29,36 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Log.d(TAG,"onCreate");
         setContentView(R.layout.activity_main);
-        storyText = findViewById(R.id.storyText);
+        textView = findViewById(R.id.textView);
+        storyButton = findViewById(R.id.storyButton);
+        storyButton.setOnClickListener(this);
+
+        storyButton2 = findViewById(R.id.storyButton2);
+        storyButton2.setOnClickListener(this);
+
+        storyButton3 = findViewById(R.id.storyButton3);
+        storyButton3.setOnClickListener(this);
+
     }
+
 
     @Override
-    protected void onStart() {
-        super.onStart();
-        Log.d(TAG,"onStart");
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.storyButton:
+                callIntent(MainActivity.this, Story1Activity.class);
+            case R.id.storyButton2:
+                callIntent(MainActivity.this,Story2Activity.class);
+            case R.id.storyButton3:
+                callIntent(MainActivity.this, Story3Activity.class);
+
+        }
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.d(TAG,"onResume");
+    public void callIntent(Object obj, Class<?> cas){
+        Intent intent = new Intent((Context) obj, cas);
+        startActivity(intent);
     }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.d(TAG,"onPause");
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.d(TAG,"onDestroy");
-    }
-
 }
+
+

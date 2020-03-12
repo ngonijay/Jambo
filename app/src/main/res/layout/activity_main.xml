@@ -10,17 +10,38 @@
 
 
     <TextView
-        android:id="@+id/storyText"
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dapibus tortor est, nec sollicitudin ex maximus non. Fusce congue gravida elit ut egestas. Suspendisse vel placerat magna. Nunc laoreet venenatis lacus, non elementum odio mollis a. Nullam laoreet odio diam, id hendrerit neque rhoncus ac. Suspendisse ut neque mi. Ut tempor felis ac lorem elementum egestas. Cras aliquam, ex in venenatis suscipit, diam ex ultrices eros, in faucibus libero orci ac lacus. Suspendisse porttitor porttitor justo in volutpat. Phasellus consectetur mauris sed venenatis efficitur. Aenean ex mauris, lobortis vitae dignissim vitae, rhoncus at libero. Pellentesque ac nulla mauris. Fusce iaculis justo enim, eu luctus enim auctor ut. Mauris finibus lorem sed massa molestie facilisis.
-Cras nec vulputate  non, porttitor suscipit nunc. Etiam vitae purus erat. Vestibulum est leo, tincidunt id viverra quis, tristique vitae tortor. Vivamus faucibus nibh in magna aliquam, sed efficitur justo lacinia. Curabitur a elit at lorem euismod vehicula finibus vitae ante. Nulla pellentesque, dolor quis cursus semper, felis risus laoreet augue, quis gravida turpis lorem at libero. Donec mollis diam at nunc aliquet, ac feugiat diam viverra. Mauris ut dictum mauris, sit amet varius sem. Vivamus vestibulum mauris sed finibus malesuada. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Curabitur auctor vitae nibh at vestibulum. Nunc eget imperdiet augue." />
+        android:text="JUMBO THE ELEPHANT"
+        android:gravity="center|bottom"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical" >
 
     <Button
         android:id="@+id/storyButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Next"
+        android:text="First Story"
         tools:layout_editor_absoluteX="161dp"
         tools:layout_editor_absoluteY="552dp" />
+
+    <Button
+        android:id="@+id/storyButton2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Second story"
+        />
+
+    <Button
+        android:id="@+id/storyButton3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="third story" />
+        </LinearLayout>
 </LinearLayout>

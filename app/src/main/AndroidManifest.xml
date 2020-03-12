@@ -9,10 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".story1"
-            android:label="@string/title_activity_story1"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".Story3Activity"></activity>
+        <activity android:name=".Story2Activity" />
+        <activity android:name=".Story1Activity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
